@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./control.css"/>
+        <div id="trim">
+            <meta charset="utf-8">
+            <title>Garage Controller</title>
+        </div>
+        
+        <input type="button" id="logout" value="Logout" onclick="logout();">
+    </head>
+
+    <body>
+        <div class="control-form">
+            <h1>Garage Controller</h1>
+            <h2 id="h2">Status: CLOSED</h2>
+            <form action="/control" method="POST">
+                <input type="button" id="submit" value="OPEN" onclick="submit();">
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8000/control');
+
+            var display_status = document.getElementById("h2");
+            var button_text = document.getElementById("submit");
+
+            // logout of the account
+            function logout() {
+                socket.emit('logoutClicked');
+            }
+
+            socket.on('logoutUpdate', function() {
+                window.location = ('http://localhost:8000/')
+            });
+
+            // submitting the command
+            function updateh2(data) {
+                if (data == "closed") {
+                    display_status = "Status: OPEN";
+                } else {
+                    display_status.values = "Status: CLOSED";
+                }
+            }
+
+            function submit() {
+                socket.emit('executeCommand');
+            }
+
+            socket.on('commandUpdate', function(data) {
+                display_status.values = "Status: OPENING...";
+                setTimeout(updateh2(data), 12000);
+            })
+        </script>
+    </body>
+
+</html>

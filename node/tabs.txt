@@ -1,0 +1,19 @@
+https://medium.com/stackfame/how-to-run-shell-script-file-or-command-using-nodejs-b9f2455cb6b7
+https://stackabuse.com/executing-shell-commands-with-node-js/
+https://egghead.io/lessons/node-js-write-or-append-to-a-file-in-node-js-with-fs-writefile-and-fs-writefilesync
+https://expressjs.com/en/starter/basic-routing.html
+https://expressjs.com/en/guide/routing.html
+
+https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-js-applications
+https://stackify.com/winston-logging-tutorial/
+
+
+https://codeshack.io/basic-login-system-nodejs-express-mysql/
+https://www.freecodecamp.org/forum/t/nodejs-trying-to-get-button-to-navigate-to-other-page-in-folder-structure/160941/3
+https://levelup.gitconnected.com/creating-a-custom-logger-for-node-js-application-using-winston-3925007c9659
+
+
+//use an array with pwd and username to correspond to different id's under the handles. Encapulate under a function and redirect to the main page of garage control.
+//Use an array to create the hash, randomize the integer of the array and then use .push to append to an array that will print to the localhost
+// exec within the child-process module can be usd to call commands from CLI
+

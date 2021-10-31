@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Form Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="./redirect.css"/>
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Login Form</h1>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit">
+        </form>
+        <p>Incorrect Username or Password</p>
+    </div>
+    <script>
+        function redirect() {
+            window.location.replace("http://localhost:8000")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.auth-form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.auth-form input[type="button"] {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-top: 200px;
+    margin-bottom: 15px;
+    background-color: #1b16161a;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.auth-form input[type="password"] {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.auth-form input[type="submit"] {
+    width: 300px;
+    padding: 15px;
+    background-color: #535b63;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
